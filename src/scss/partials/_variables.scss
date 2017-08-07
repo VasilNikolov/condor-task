@@ -39,42 +39,42 @@ $font-family-showcard: 'Showcard Gothic';
 // Fonts
 $fonts: (
 	h1: (
-		size: 24px 28px 38px 44px 48px,
+		size: 1.5em 1.5em 38px 44px 48px,
 		height: 30px 34px 38px 44px 48px,
 		family: $font-family-adelle-regular,
 		weight: normal,
 		style: normal
 	),
 	h2: (
-		size: 20px 23px 26px 30px 30px,
+		size: 1.3em 1.3em 26px 30px 30px,
 		height: 22px 26px 26px 30px 30px,
 		family: $font-family-adelle-regular,
 		weight: normal,
 		style: normal
 	),
 	h3: (
-		size: 14px 14px 14px 16px 16px,
+		size: 1em 1em 14px 16px 16px,
 		height: 22px 26px 14px 16px 16px,
 		family: $font-family-adelle-regular,
 		weight: normal,
 		style: normal
 	),
 	p1: (
-		size: 10px 10px 10px 12px 12px,
+		size: .7em .7em 10px 12px 12px,
 		height: 22px 25px 10px 12px 12px,
 		family: $font-family-tahoma,
 		weight: normal,
 		style: normal
 	),
 	a: (
-		size: 12px 13px 13px 13px 14px,
+		size: .7em .7em 13px 13px 14px,
 		height: 12px 13px 12px 13px 14px,
 		family: $font-family-tahoma,
 		weight: normal,
 		style: normal
 	),
 	logo: (
-		size: 28px 28px 28px 30px 30px,
+		size: 1.5em 1.5em 28px 30px 30px,
 		height: 28px 28px 28px 30px 30px,
 		family: $font-family-showcard,
 		weight: normal,
