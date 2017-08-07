@@ -10,15 +10,11 @@ $(document).ready(function () {
     let isIE = () => {
         return navigator.appName == 'Microsoft Internet Explorer' || (navigator.appName == "Netscape" && navigator.appVersion.indexOf('Edge') > -1);
     };
-
-
     // IE detection
     if (isIE()) {
-        $('body').addClass('IE');
+        $('body').addClass('edge');
     }
-
-    //Edge detection
     if (/MSIE (\d+\.\d+);/.test(navigator.userAgent) || navigator.userAgent.indexOf("Trident/") > -1 ){
-        $('body').addClass('IE');
+        $('body').addClass('ie');
     }
 });

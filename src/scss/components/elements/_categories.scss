@@ -1,5 +1,6 @@
 .categories-menu {
     @include padding(s, top bottom);
+    display: block;
     &__item {
         @include padding(xs, top);
         &:first-child {

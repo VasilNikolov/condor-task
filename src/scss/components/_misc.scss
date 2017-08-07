@@ -10,7 +10,15 @@ html {
     height: 100%;
 }
 
-body.IE {
+body.edge {
+    .floating-logo {
+        span {
+            letter-spacing: 7px;
+        }
+    }
+}
+
+body.ie {
     .floating-logo {
         span {
             letter-spacing: 7px;

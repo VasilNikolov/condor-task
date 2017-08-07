@@ -4,4 +4,7 @@
     @include padding(s, top);
     @include padding(xs, left right bottom);
     border: 10px solid $color-bg;
+    &__row {
+        margin: 0 -15px;
+    }
 }
