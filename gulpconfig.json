@@ -1,0 +1,22 @@
+{
+  "stylesheet":
+    {
+      "src": ["src/scss/*/*.scss", "src/scss/*/*/*.scss", "src/scss/*.scss"],
+      "dest": "assets/css/",
+      "options": {
+        "dev": {
+          "outputStyle": "expanded"
+        },
+        "prod": {
+          "outputStyle": "compressed"
+        }
+      }
+    },
+  "javascript": {
+    "files": ["src/scripts/*.js", "src/scripts/src/*.js"],
+    "source": "src/scripts/",
+    "dest": "assets/scripts/",
+    "title": "app.js"
+  }
+}
+

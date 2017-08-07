@@ -1,0 +1,19 @@
+/*
+ *  font-awesome mixin
+ *  Usage: font-awesome($unicode, $pseudo) {@content;};
+ *  Example: font-awesome(f06a, before) {...};
+ *  Params: $unicode - defines the font awesome icon
+ *          $pseudo - defines after or before pseudo classes
+ *  Requires: font awesome implemented
+ */
+@function unicode($str) {
+	@return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
+@mixin font-awesome($unicode: 'f06a', $pseudo: before) {
+	&:#{$pseudo} {
+		font-family: "FontAwesome", "sans-serif";
+		content: unicode($unicode);
+		@content;
+	}
+}

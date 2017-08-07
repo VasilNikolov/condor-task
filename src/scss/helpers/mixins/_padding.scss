@@ -1,0 +1,31 @@
+/*
+ *  Padding generator mixin
+ *  Used to fake margins when margin is not possible
+ *  Usage: padding($size, $sides);
+ *  Example: padding(huge, top bottom left);
+ *  Params: $size - corresponds to label of desired margin from margin var list
+ *          $sides - single value or list with desired sides to apply padding to
+ *  Requires: $margin and $breakpoints variables
+ */
+@mixin padding($size, $sides: null) {
+	@if map_has_key($spacings, $size) {
+		$padding: map_get($spacings, $size);
+		@for $z from 1 through length($padding) {
+			$marg: nth($padding, $z);
+			$i: index($padding, $marg);
+			$dir: map_get(nth(nth($breakpoints, $i), 2), dir);
+			$size: map_get(nth(nth($breakpoints, $i), 2), size);
+			@media screen and (#{$dir}-width: $size) {
+				@if $sides == null {
+					padding: nth($padding, $i);
+				} @else {
+					@each $side in $sides {
+						padding-#{$side}: nth($padding, $i);
+					}
+				}
+			}
+		}
+	} @else {
+		@debug 'Mixin padding() failed'
+	}
+}

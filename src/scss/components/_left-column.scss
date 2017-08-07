@@ -1,0 +1,14 @@
+.left-column {
+    color: $color-white;
+    background-color: $main-darken;
+    @include padding(m, top);
+    @include padding(xs, left right bottom);
+    border: 10px solid $color-main;
+    p {
+        @include margin(m, top);
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+}

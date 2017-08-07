@@ -1,0 +1,88 @@
+// Paths
+$path-asset-root: '../';
+
+// Colors
+$color-main: #066666;
+$color-contrast: #022929;
+$color-white: #ffffff;
+$main-darken: #1e3a3a;
+$main-lighten: #83b3b3;
+$color-bg: #055252;
+$grey : #848484;
+
+// Container
+$container: 1153px;
+
+// Breakpoints
+$breakpoints: (
+	xs: (dir: min, size: 0px),
+	s: (dir: min, size: 768px),
+	m: (dir: min, size: 992px),
+	l: (dir: min, size: 1200px),
+	xl: (dir: min, size: 1281px)
+);
+
+// Spacings
+$spacings: (
+	xs: 10px 10px 10px 10px 10px,
+	s: 10px 10px 10px 15px 15px,
+	m: 10px 10px 15px 20px 20px,
+	l: 15px 20px 25px 30px 30px,
+	xl: 30px 40px 60px 80px 100px
+);
+
+// Font families
+$font-family-adelle-regular: 'AdelleSans Regular';
+$font-family-tahoma: 'Tahoma';
+$font-family-showcard: 'Showcard Gothic';
+
+// Fonts
+$fonts: (
+	h1: (
+		size: 24px 28px 38px 44px 48px,
+		height: 30px 34px 38px 44px 48px,
+		family: $font-family-adelle-regular,
+		weight: normal,
+		style: normal
+	),
+	h2: (
+		size: 20px 23px 26px 30px 30px,
+		height: 22px 26px 26px 30px 30px,
+		family: $font-family-adelle-regular,
+		weight: normal,
+		style: normal
+	),
+	h3: (
+		size: 14px 14px 14px 16px 16px,
+		height: 22px 26px 14px 16px 16px,
+		family: $font-family-adelle-regular,
+		weight: normal,
+		style: normal
+	),
+	p1: (
+		size: 10px 10px 10px 12px 12px,
+		height: 22px 25px 10px 12px 12px,
+		family: $font-family-tahoma,
+		weight: normal,
+		style: normal
+	),
+	a: (
+		size: 12px 13px 13px 13px 14px,
+		height: 12px 13px 12px 13px 14px,
+		family: $font-family-tahoma,
+		weight: normal,
+		style: normal
+	),
+	logo: (
+		size: 28px 28px 28px 30px 30px,
+		height: 28px 28px 28px 30px 30px,
+		family: $font-family-showcard,
+		weight: normal,
+		style: normal
+	),
+);
+
+// Transitions
+$transition-short: 0.2s;
+$transition: 0.4s;
+$transition-long: 0.8s;

@@ -1,3 +1,4 @@
 /node_modules/
-assets/css/*
-assets/scripts/*
+/.idea/
+/assets/css/*
+/assets/scripts/*

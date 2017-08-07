@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-sizing: border-box;
+    @include padding(s);
+    @include margin(m, top);
+    background-color: $color-main;
+    @include bp(s) {
+        flex-direction: row;
+    }
+    &__copyright {
+        color: $color-white;
+        @include text(a);
+    }
+    &__menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        &__item {
+            display: inline-block;
+            a {
+                color: $color-white;
+                padding-left: 9px;
+                @include bp(s) {
+                    @include padding(s, left);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+/*
+ *  Text styles mixin
+ *  Usage: text($type);
+ *  Example: text(p2);
+ *  Params: $type - corresponds to label of desired text from fonts var list
+ *  Requires: $fonts and $breakpoints variables
+ */
+@mixin text($type) {
+	@if map_has_key($fonts, $type) {
+		$text: map_get($fonts, $type);
+		$f-size: map_get($text, size);
+		$l-height: map_get($text, height);
+		$f-family: map_get($text, family);
+		$f-weight: map_get($text, weight);
+		$f-style: map_get($text, style);
+		@for $i from 1 through length($breakpoints) {
+			$dir: map_get(nth(nth($breakpoints, $i), 2), dir);
+			$size: map_get(nth(nth($breakpoints, $i), 2), size);
+			@media screen and (#{$dir}-width: $size) {
+				font-size: nth($f-size, $i);
+				line-height: nth($l-height, $i);
+			}
+		}
+		font-family: $f-family;
+		font-weight: $f-weight;
+		font-style: $f-style;
+	} @else {
+		@debug 'Mixin text() failed'
+	}
+}

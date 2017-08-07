@@ -1,0 +1,15 @@
+/*
+ *  Clearfix mixin
+ *  Used to clearfix parent of floated elements
+ *  Usage: clearfix;
+ *  Example: clearfix;
+ *  Params: none;
+ *  Requires: nothing;
+ */
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

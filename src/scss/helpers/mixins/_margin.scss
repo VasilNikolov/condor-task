@@ -1,0 +1,30 @@
+/*
+ *  Margin generator mixin
+ *  Usage: margin($size, $sides);
+ *  Example: margin(huge, top bottom left);
+ *  Params: $size - corresponds to label of desired margin from margin var list
+ *          $sides - single value or list with desired sides to apply margin to
+ *  Requires: $margin and $breakpoints variables
+ */
+@mixin margin($size, $sides: null) {
+	@if map_has_key($spacings, $size) {
+		$margin: map_get($spacings, $size);
+		@for $z from 1 through length($margin) {
+			$marg: nth($margin, $z);
+			$i: index($margin, $marg);
+			$dir: map_get(nth(nth($breakpoints, $i), 2), dir);
+			$size: map_get(nth(nth($breakpoints, $i), 2), size);
+			@media screen and (#{$dir}-width: $size) {
+				@if $sides == null {
+					margin: nth($margin, $i);
+				} @else {
+					@each $side in $sides {
+						margin-#{$side}: nth($margin, $i);
+					}
+				}
+			}
+		}
+	} @else {
+		@debug 'Mixin margin() failed'
+	}
+}

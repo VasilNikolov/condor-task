@@ -1,0 +1,122 @@
+.header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    @include padding(xs, left right);
+    color: $color-white;
+    background-color: $color-contrast;
+    @include bp(s) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__logo {
+        display: inline-block;
+        @include text(logo);
+        padding-top: 7px;
+        @include padding(m, left);
+        @include padding(s, right);
+        @include margin(s, top);
+        @include margin(l, bottom);
+        text-transform: uppercase;
+        background-color: $color-main;
+    }
+    &__menu {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        overflow-y: scroll;
+        height: 100%;
+        z-index: 100;
+        &.expanded {
+            display: flex;
+            background-color: $color-main;
+        }
+        @include bp(s) {
+            overflow: auto;
+            position: static;
+            display: flex;
+            align-items: center;
+            @include margin(xs, left);
+            flex-direction: row;
+        }
+        &__item {
+            display: block;
+            border-top: 1px solid $main-lighten;
+            @include bp(s) {
+                border: none;
+            }
+            &:first-child {
+                border-top: none;
+            }
+            @include bp(s) {
+                display: inline-block;
+                margin-right: 2px;
+            }
+            &.menu-parent {
+                & > a {
+                    @include font-awesome('f107', after) {
+                        @include margin(xs, left);
+                    }
+                }
+            }
+            a {
+                color: inherit;
+                display: block;
+                background-color: $color-main;
+                text-decoration: none;
+            }
+
+            & > a {
+                text-align: center;
+                display: block;
+                @include padding(xl, top bottom);
+                @include bp(s) {
+                    display: inline-block;
+                    width: 100px;
+                    @include padding(xs, top bottom);
+                }
+            }
+        }
+    }
+}
+
+
+.menu-dropdown {
+    background-color: $color-main;
+    z-index: -1;
+    height: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: $transition-short all;
+    @include bp(s) {
+        position: absolute;
+        padding: 4px;
+        padding-top: 6px;
+    }
+    &.active {
+        z-index: 10;
+        height: auto;
+        opacity: 1;
+        border-top: 1px solid $main-lighten;
+    }
+    &__item {
+        text-align: center;
+        @include bp(s) {
+            text-align: left;
+        }
+        border-top: 1px solid $main-lighten;
+        &:first-child {
+            border-top: none;
+        }
+        a {
+            @include padding(s, top bottom);
+            @include bp(s) {
+                padding: 6px;
+            }
+        }
+    }
+}

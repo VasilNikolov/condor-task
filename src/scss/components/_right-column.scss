@@ -1,0 +1,7 @@
+.right-column {
+    color: $color-white;
+    background-color: $main-darken;
+    @include padding(s, top);
+    @include padding(xs, left right bottom);
+    border: 10px solid $color-bg;
+}

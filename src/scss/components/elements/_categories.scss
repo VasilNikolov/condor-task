@@ -1,0 +1,15 @@
+.categories-menu {
+    @include padding(s, top bottom);
+    &__item {
+        @include padding(xs, top);
+        &:first-child {
+            padding: 0;
+        }
+        a {
+            text-decoration: underline;
+            color: $color-white;
+            @include text(h3);
+            font-family: 'verdana';
+        }
+    }
+}
