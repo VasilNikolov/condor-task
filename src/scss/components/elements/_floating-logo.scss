@@ -1,7 +1,8 @@
 .floating-logo {
     display: none;
-    padding: 5px;
-    padding-bottom: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 31px;
     z-index: 10;
     @include text(logo);
     color: $color-white;
@@ -13,12 +14,12 @@
         display: block;
         writing-mode: vertical-rl;
         text-orientation: upright;
-        letter-spacing: -10px;
     }
 }
 
 .logo-container {
     position: fixed;
+    height: 110px;
     left: 0;
     right: 0;
     top: 85px;

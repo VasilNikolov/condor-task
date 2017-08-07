@@ -10,6 +10,14 @@ html {
     height: 100%;
 }
 
+body.IE {
+    .floating-logo {
+        span {
+            letter-spacing: 7px;
+        }
+    }
+}
+
 main.row {
     @include margin(xs, top);
 }
